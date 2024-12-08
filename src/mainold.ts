@@ -33,8 +33,11 @@ require("dotenv").config();
 
   console.log("Connected nodes:", litNodeClient.connectedNodes);
 
+  console.log("LIT_CHAIN_RPC_URL:", LIT_CHAIN_RPC_URL);
+
   const wallet = new ethers.Wallet(
-    process.env.PRIVATE_KEY!,
+   // process.env.PRIVATE_KEY!,
+   "2678df87e92d502ebe0686d9cba733867d6b4a76cadfae9fb12eeb9fa931b505",
     new ethers.providers.JsonRpcProvider(LIT_CHAIN_RPC_URL)
   );
 
